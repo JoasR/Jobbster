@@ -1,0 +1,34 @@
+:root{
+    --color-blue: #254252;
+    --color-dark-blue: #171c2d;
+    --color-orange: #e37239;
+    --color-light-orange: #f9982f;
+    --color-yellow: #eab56f;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+    width: 100%;
+}
+
+
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-color: #254252;
+    color: #eab56f;
+    font-family: var(--font-ubuntu);
+}
+
+li {
+    
+}
+
