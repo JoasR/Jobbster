@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+
+
 :root{
     --color-blue: #254252;
     --color-dark-blue: #171c2d;
@@ -25,7 +28,7 @@ header{
     height: 100vh;
     background-color: #254252;
     color: #eab56f;
-    font-family: var(--font-ubuntu);
+    font-family: sans-serif;
 }
 
 li {
