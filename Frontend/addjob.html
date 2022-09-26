@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./addjob.css" />
+    <script src="./previewimages.js" defer></script>
+    <script src="./submitjob.js" defer></script>
     <title>Document</title>
   </head>
   <body>
@@ -13,22 +15,15 @@
       <div class="form">
         <div class="inputfield">
           <label>Title</label>
-          <input type="text" class="input" placeholder="Title of the job." />
+          <input type="text" class="input" placeholder="Title of the job." required/>
         </div>
         <div class="inputfield">
           <label>Job Description</label>
           <textarea
             class="textarea"
-            placeholder="Description of the job."
+            placeholder="Description of the job." 
+            required
           ></textarea>
-        </div>
-        <div class="inputfield">
-          <label>Beräknade Timmar</label>
-          <input
-            type="number"
-            class="input"
-            placeholder="Estimated time for the job."
-          />
         </div>
         <div class="inputfield">
           <label>Category</label>
@@ -42,33 +37,36 @@
           </div>
         </div>
         <div class="inputfield">
+          <label id="imageuploadlbl" for="imageupload">Upload Image</label>
+          <input id="imageupload" class="btn" type="file" accept="image/*" onchange="showPreview(event)" required/>
+        </div>
+        <div class="preview">
+          <img id="file-ip-1-preview">
+        </div>
+        <div class="inputfield">
           <p id="addressinfo">ADDRESS</p>
         </div>
         <div class="inputfield address">
           <label>City</label>
-          <input type="text" id="city" class="input" placeholder="City of the job."/>
+          <input type="text" id="city" class="input" placeholder="City of the job." required/>
         </div>
         <div class="inputfield address">
-          <label>Street</label>
-          <input id="street" type="text" class="input" placeholder="Street of the job."/>        
-        </div>
-        <div class="inputfield address">
-          <label>House Number</label>
-          <input id="street" type="text" class="input" placeholder="Nr."/>        
+          <label>Street + Number</label>
+          <input id="street" type="text" class="input" placeholder="Street of the job." required/>        
         </div>
         <div class="inputfield address">
           <label>Postal Code</label>
-          <input type="text" id="postalcode" class="input" placeholder="Postal code of the job."/>
+          <input type="text" id="postalcode" class="input" placeholder="Postal code of the job." required/>
         </div>
         <div class="inputfield terms">
           <label class="check">
-            <input type="checkbox" />
+            <input type="checkbox" required/>
             <span class="checkmark"></span>
           </label>
           <p>Agree to terms and conditions</p>
         </div>
         <div class="inputfield">
-          <input type="submit" value="Post Job" class="btn" required/>
+          <input id="submit-job" type="submit" value="Post Job" class="btn"/>
         </div>
       </div>
     </div>

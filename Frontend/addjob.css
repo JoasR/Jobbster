@@ -194,6 +194,37 @@ select:invalid {
   color: #314755;
 }
 
+#imageupload{
+  display: none;
+}
+
+#imageuploadlbl{
+  display:block;
+  width:45%;
+  height:40px;
+  margin-left: 25%;
+  line-height:40px;
+  text-align:center;
+  background:#314755;
+  color:#fff;
+  font-size:15px;
+  text-transform:Uppercase;
+  font-weight: 400;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+#imageuploadlbl:hover{
+  background: #26a0da;
+}
+
+.preview img{
+  width: 50%;
+  height: 50%;
+  display: none;
+  margin: 0px auto 30px auto;
+}
+
 @media (max-width: 420px) {
   .wrapper .form .inputfield {
     flex-direction: column;
