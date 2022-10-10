@@ -476,6 +476,15 @@ footer p{
         display: none;
     }
     
+    header nav ul li .borderBottomShort{
+        position: absolute;
+        width: 0px;
+        height: 2px;
+        background-color: var(--theme-color);
+        bottom: 15px;
+        transition: all .5s;
+    }
+
     header nav ul li .borderBottom{
         position: absolute;
         width: 0px;
@@ -513,6 +522,10 @@ footer p{
 
     header nav ul li:hover > .borderBottomExtraLong{
         width: 150px;
+    }
+
+    header nav ul li:hover > .borderBottomShort{
+        width: 40px;
     }
 
     header .container{
