@@ -4,30 +4,104 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jobbster</title>
+    <title>Responsive Portfolio</title>
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
 </head>
 <body>
     <header>
         <nav id="navbar">
-            <label class="logo"> JOBB<span>STER</span> </label>
+            <label class="logo"> Jobb<span>ster</span> </label>
             <ul id="menu">
-                 <li><a href="#">Home</a> <div class="borderBottom"></div> </li>
-                 <li><a href="./jobs.html">Jobs</a> <div class="borderBottom"></div> </li>
-                 <li><a href="./addjob.html">Post a job</a> <div class="borderBottom"></div> </li>
-                 <li><a href="#">Skills</a> <div class="borderBottom"></div> </li>
-                 <li><a href="#">About</a> <div class="borderBottom"></div> </li>
+                 <li><a href="#">Hem</a> <div class="borderBottom"></div> </li>
+                 <li><a href="#">Alla Jobb</a> <div class="borderBottom"></div> </li>
+                 <li><a href="#">Lägga ut jobb</a> <div class="borderBottomLong"></div> </li>
+                 <li><a href="#">Om Jobbster</a> <div class="borderBottomLong"></div> </li>
                  <li><a href="#">Contact</a> <div class="borderBottom"></div> </li>
-                 <li><a href="#">Sign In</a> <div class="borderBottom"></div> </li>
-                 <li><a href="#">Register</a> <div class="borderBottom"></div> </li>
+                 <li class="align-right"><a href="#">Logga In | Registrera</a> <div class="borderBottomExtraLong"></div> </li>
             </ul>
             <div class="menuBtn">
                 <i id="menuBtn" class="fas fa-bars"></i>
             </div>
         </nav>
+        <div class="container">
+            <p>Välkommen till</p>
+            <h1>Jobbster</h1>
+            <h2>En plats där du kan hitta <span>jobb</span> eller hitta folk för dina <span>jobb</span></h2>
+            <h3>Så du behöver inte oroa dig för alla <span>sysslor</span> du har kvar att göra</h3>
+            <a href="#">Hitta job</a>
+            <a href="#">lägga ut jobbannons</a>
+        </div>
     </header>
-    <div id="showHere">
+    <main>
+        <div class="about">
+            <div class="col col1">
+                <img src="./assets/images/man.png" alt="">
+            </div>
+            <div class="col col2">
+                <h1>About Me</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime corporis labore veritatis similique assumenda consectetur nam aliquid inventore? Cupiditate rerum consectetur quod quos maiores earum ipsum debitis harum laborum accusantium.</p>
+                <div class="sm-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="services">
+            <h1>My Services</h1>
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita dolorum sunt quas, hic doloremque aspernatur accusantium nobis recusandae facere nulla odio illo quaerat aperiam neque voluptatibus facilis earum numquam consequatur.</h2>
+            <div class="col">
+                <i class="fas fa-tv"></i>
+                <h3>Responsive Layout</h3>
+                <h4>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti nemo, asperiores quidem nihil ipsa sit unde corrupti ducimus ratione ipsum?</h4>
+            </div>
+            <div class="col">
+                <i class="fab fa-html5"></i>
+                <h3>HTML5</h3>
+                <h4>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti nemo, asperiores quidem nihil ipsa sit unde corrupti ducimus ratione ipsum?</h4>
+            </div>
+            <div class="col">
+                <i class="fab fa-searchengin"></i>
+                <h3>UI/UX</h3>
+                <h4>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti nemo, asperiores quidem nihil ipsa sit unde corrupti ducimus ratione ipsum?</h4>
+            </div>
+        </div>   
 
-    </div>
+        <div class="works">
+            <h1>Latest Works</h1>
+            <h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, officiis fugiat iste magni placeat, corporis vel assumenda maiores molestiae quos obcaecati aliquid eaque sunt unde debitis hic necessitatibus quo reiciendis?
+            </h3>
+            <ul>
+                <li><a class="active" href="#">UI/UX</a></li>
+                <li><a href="#">Responsive Layout</a></li>
+                <li><a href="#">HTML5</a></li>
+            </ul>
+            <div class="images">
+                <img src="./assets/uidesign/1.webp" alt="">
+                <img src="./assets/uidesign/2.webp" alt="">
+                <img src="./assets/uidesign/3.webp" alt="">
+                <img src="./assets/uidesign/4.webp" alt="">
+                <img src="./assets/uidesign/5.webp" alt="">
+                <img src="./assets/uidesign/6.webp" alt="">
+            </div>
+        </div>
+        <div class="contact">
+            <h1>Contact Me</h1>
+            <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga, repellendus quis commodi in facilis inventore deleniti sed exercitationem debitis molestiae.</h3>
+            <div class="inline-container">
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
+            </div>
+            <input type="text" placeholder="Email">
+            <textarea placeholder="Message"></textarea>
+            <button>Send</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2022 All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
