@@ -12,13 +12,14 @@
 <body>
     <header>
         <nav id="navbar">
-            <label class="logo"> Jobb<span>ster</span> </label>
+            <a href="#" class="logo">Jobb<span>ster</span></a>
+            <!-- <label class="logo"> Jobb<span>ster</span> </label> -->
             <ul id="menu">
                  <li><a href="#">Hem</a> <div class="borderBottomShort"></div> </li>
                  <li><a href="#">Alla Jobb</a> <div class="borderBottom"></div> </li>
                  <li><a href="#">Lägga ut jobb</a> <div class="borderBottomLong"></div> </li>
                  <li><a href="#">Om Jobbster</a> <div class="borderBottomLong"></div> </li>
-                 <li><a href="#">Contact</a> <div class="borderBottom"></div> </li>
+                 <li><a href="#">Contact</a> <div class="borderBottomMedium"></div> </li>
                  <li class="align-right"><a href="#">Logga In | Registrera</a> <div class="borderBottomExtraLong"></div> </li>
             </ul>
             <div class="menuBtn">
@@ -36,17 +37,21 @@
     </header>
     <main>
         <div class="about">
-            <div class="col col1">
-                <img src="./assets/images/man.png" alt="">
-            </div>
             <div class="col col2">
-                <h1>About Me</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime corporis labore veritatis similique assumenda consectetur nam aliquid inventore? Cupiditate rerum consectetur quod quos maiores earum ipsum debitis harum laborum accusantium.</p>
+                <h1>Download Jobbster</h1>
+                <p>Ladda ner Jobbster nu för att göra det ännu enklare att söka jobb eller lägga ut jobsannonser. <br><br> Nu tillgänglig på både Google Play Store och Apple App Store. <br><br> <span id="downloadForFree" style="font-weight: bold;"> Ladda ner Jobbster nu gratis på Google Play och i App Store! </span></p>
                 <div class="sm-icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://play.google.com/store/apps/details?id=se.jobbster.android&gl=SE" target="_blank"><i class="fab fa-google-play"></i></a>
+                    <a href="https://apps.apple.com/app/jobbster/id1604561867" target="_blank"><i class="fab fa-app-store"></i></a>
                 </div>
+            </div>
+            <div class="col col1">
+                <a href="https://play.google.com/store/apps/details?id=se.jobbster.android&gl=SE" target="_blank">
+                    <img id="get-google" src="./assets/images/getOnGooglePlay.png" alt="Få Jobbster från google play">
+                </a>
+                <a href="https://apps.apple.com/app/jobbster/id1604561867" target="_blank">
+                    <img id="get-apple" src="./assets/images/getOnAppStore.png" alt="Få Jobbster från App Store">
+                </a>
             </div>
         </div>
         <div class="services">

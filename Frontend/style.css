@@ -133,6 +133,8 @@ header .container h3{
 }
 
 header .container a {
+    display: inline-block;
+    margin-top: 10px;
     font-size: 19px;
     background-color: var(--theme-color);
     font-size: 500;
@@ -160,6 +162,7 @@ main{
     display: block;
     margin: 20px auto;
     background-color: #eef1f6;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .about .col img{
@@ -178,6 +181,10 @@ main{
     margin: 10px auto;
 }
 
+.about .col p #downloadForFree{
+    font-size: 11px;
+}
+
 .about .col2{
     position: relative;
 }
@@ -190,7 +197,7 @@ main{
 
 .about .col2 .sm-icons a{
     color: #232b2b;
-    font-size: 18px;
+    font-size: 20px;
     padding-left: 16px;
 }
 
@@ -377,11 +384,21 @@ footer p{
     }
     
     .about .col h1{
+        color: #232b2b;
         font-size: 23px;
     }
     
     .about .col p{
-        font-size: 13px;
+        color: #232b2b;
+        font-size: 15px;
+    }
+
+    .about .col2 .sm-icons a{
+        font-size: 30px;
+    }
+
+    .about .col p #downloadForFree{
+        font-size: 16px;
     }
 
     /* services styling */
@@ -512,8 +529,21 @@ footer p{
         transition: all .5s;
     }
 
+    header nav ul li .borderBottomMedium{
+        position: absolute;
+        width: 0px;
+        height: 2px;
+        background-color: var(--theme-color);
+        bottom: 15px;
+        transition: all .5s;
+    }
+
+    header nav ul li:hover > .borderBottomMedium{
+        width: 63px;
+    }
+
     header nav ul li:hover > .borderBottom{
-        width: 60px;
+        width: 70px;
     }
 
     header nav ul li:hover > .borderBottomLong{
@@ -578,7 +608,7 @@ footer p{
     }
     
     .about .col p{
-        font-size: 13px;
+        font-size: 15px;
     }
 
      /* services styling */
