@@ -5,9 +5,16 @@ let menuHidden = true;
 
 menuBtn.addEventListener("click", () => {
     if(menuHidden){
+        navBar.style.background = "#232b2b";
         menu.style.width = "100%";
         menuHidden = false;
-    } else {
+    } else if (window.scrollY === 0){
+        navBar.style.background = "transparent";
+        menu.style.width = "0%";
+        menuHidden = true;
+    } 
+    else {
+        navBar.style.background = "#232b2b";
         menu.style.width = "0%";
         menuHidden = true;
     }

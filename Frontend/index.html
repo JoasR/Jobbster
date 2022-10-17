@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Portfolio</title>
+    <title>Jobbster</title>
     <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
@@ -20,7 +20,7 @@
                  <li><a href="#">Lägga ut jobb</a> <div class="borderBottomLong"></div> </li>
                  <li><a href="#">Om Jobbster</a> <div class="borderBottomLong"></div> </li>
                  <li><a href="#">Contact</a> <div class="borderBottomMedium"></div> </li>
-                 <li class="align-right"><a href="#">Logga In | Registrera</a> <div class="borderBottomExtraLong"></div> </li>
+                 <li class="align-right"><a class="login-btn" href="#">Log In | Registrera</a> <!-- <div class="borderBottomExtraLong"></div> </li> -->
             </ul>
             <div class="menuBtn">
                 <i id="menuBtn" class="fas fa-bars"></i>
@@ -31,8 +31,8 @@
             <h1>Jobbster</h1>
             <h2>En plats där du kan hitta <span>jobb</span> eller hitta folk för dina <span>jobb</span></h2>
             <h3>Så du behöver inte oroa dig för alla <span>sysslor</span> du har kvar att göra</h3>
-            <a href="#">Hitta job</a>
-            <a href="#">lägga ut jobbannons</a>
+            <a class="header-btn" href="#">Hitta job</a>
+            <a class="header-btn" href="#">Lägga ut jobbannons</a>
         </div>
     </header>
     <main>
@@ -47,11 +47,15 @@
             </div>
             <div class="col col1">
                 <a href="https://play.google.com/store/apps/details?id=se.jobbster.android&gl=SE" target="_blank">
-                    <img id="get-google" src="./assets/images/getOnGooglePlay.png" alt="Få Jobbster från google play">
+                    <img id="get-google" class="get-app" src="./assets/images/getOnGooglePlay.png" alt="Få Jobbster från Google Play">
                 </a>
-                <a href="https://apps.apple.com/app/jobbster/id1604561867" target="_blank">
-                    <img id="get-apple" src="./assets/images/getOnAppStore.png" alt="Få Jobbster från App Store">
+                <img id="androidqr" class="qrcode" src="./assets/images/QR/androidQR.png" alt="Google Play QR-Code">
+            </div>
+            <div class="col col1">
+                <a href="https://play.google.com/store/apps/details?id=se.jobbster.android&gl=SE" target="_blank">
+                    <img id="get-apple" class="get-app" src="./assets/images/getOnAppStore.png" alt="Få Jobbster från IOS Apple Store">
                 </a>
+                <img id="appleqr" class="qrcode" src="./assets/images/QR/appleQR.png" alt="IOS Apple Store QR-Code">
             </div>
         </div>
         <div class="services">

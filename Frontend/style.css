@@ -38,6 +38,7 @@ header{
     background-size: cover;
     color: white;
     font-family: var(--font-ubuntu);
+    min-height: 750px;
 }
 
 header #navbar{
@@ -62,6 +63,15 @@ header .container span {
     color: var(--theme-color);
 }
 
+header #navbar .logo {
+    transition: all .3s ease-in-out; 
+}
+
+header #navbar .logo:hover {
+    position: absolute;
+    transform: scale(1.2);
+}
+
 header nav #menuBtn{
     color: var(--theme-color);
     position: absolute;
@@ -81,6 +91,28 @@ header nav ul a{
 
 header nav ul a:hover{
     color: var(--theme-color);
+}
+
+header .login-btn{
+    font-size: 19px;
+    background-color: var(--theme-color);
+    -webkit-transition: all 0.5s;
+	transition: all 0.5s;
+    padding: 7px 25px;
+    color: #232b2b;
+    font-family: var(--font-ubuntu);
+    border-radius: 2px;
+}
+
+header .login-btn:hover,
+.login-btn:focus {
+	color: var(--theme-color);
+    background-color: #333;
+} 
+
+header .header-btn:focus {
+    color: var(--theme-color);
+    background-color: #333;
 }
 
 header nav ul{
@@ -137,9 +169,32 @@ header .container a {
     margin-top: 10px;
     font-size: 19px;
     background-color: var(--theme-color);
-    font-size: 500;
     color: #232b2b;
     padding: 8px 36px;
+    -webkit-transition: all 0.5s;
+	transition: all 0.5s;
+    border-radius: 2px;
+}
+
+header .header-btn {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}  
+
+header .header-btn:hover, .header-btn:focus {
+    animation: pulse 1s;
+    box-shadow: 0 0 0 1em transparent;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 var(--theme-color); }
+}
+
+header .header-btn:nth-of-type(2){
+    margin-top: 15px;
+}
+
+.container .header-btn{
+    font-size: 19px;
 }
 
 /* About styling */
@@ -199,6 +254,44 @@ main{
     color: #232b2b;
     font-size: 20px;
     padding-left: 16px;
+    transition: all .1s ease-in-out;
+}
+
+
+.about .sm-icons a:hover{
+    color: var(--theme-color);
+}
+
+.about .sm-icons i{
+    transition: all .5s ease-in-out;
+}
+
+.about .sm-icons i:hover{
+    transform: scale(1.2);
+}
+
+main .about #get-google{
+    width: 225px;
+}
+
+main .about #get-apple{
+    width: 255px;
+}
+
+main .about .get-app{
+    margin-top: 10px;
+    height: auto;
+    transition: all .5s ease-in-out;
+}
+
+main .about .get-app:hover{
+    transform: scale(1.1);
+}
+
+main .about .qrcode{
+    margin-top: 0px;
+    width: 210px;
+    height: auto;   
 }
 
 /* services styling */
@@ -352,6 +445,7 @@ main{
     font-family: var(--font-ubuntu);
     opacity: 0.8;
     font-size: 14px;
+    border-radius: 2px;
 }
 
 .contact button:hover{
@@ -375,6 +469,12 @@ footer p{
 }
 
 /* ****** For Tablets and Ipad screen ******* */
+
+/* Header Styling */
+
+header .header-btn:nth-of-type(2){
+    margin-left: 15px;
+}
 
 @media(min-width: 767px) {
     /* about styling */
@@ -583,6 +683,10 @@ footer p{
     
     header .container a {
         padding: 10px 40px;
+    }
+
+    header .header-btn:nth-of-type(2){
+        margin-left: 15px;
     }
 
     header #menu .align-right {
