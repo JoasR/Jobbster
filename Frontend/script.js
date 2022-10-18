@@ -1,6 +1,7 @@
 const menuBtn = document.getElementById("menuBtn");
 const navBar = document.getElementById("navbar");
 const menu = document.getElementById("menu");
+const body = document.body;
 let menuHidden = true;
 
 menuBtn.addEventListener("click", () => {
@@ -8,27 +9,31 @@ menuBtn.addEventListener("click", () => {
         navBar.style.background = "#232b2b";
         menu.style.width = "100%";
         menuHidden = false;
+        body.style.overflow = "hidden";
     } else if (window.scrollY === 0){
         navBar.style.background = "transparent";
         menu.style.width = "0%";
         menuHidden = true;
-    } 
-    else {
+        body.style.overflow = "visible";
+    } else {
         navBar.style.background = "#232b2b";
         menu.style.width = "0%";
         menuHidden = true;
+        body.style.overflow = "visible";
     }
 })
 
-window.addEventListener("resize", () => {
-    if(window.screen.width > 1023){
+window.addEventListener("resize", openCloseHamburger);
+
+function openCloseHamburger(){
+    if(document.documentElement.clientWidth > 1299){
         menu.style.width = "100%";
-        menuHidden = false;
-    } else {
+    } else if (document.documentElement.clientWidth < 1300 && menuHidden){
         menu.style.width = "0%";
-        menuHidden = true;
+    } else {
+        menu.style.width = "100%";
     }
-})
+}
 
 window.addEventListener("scroll", () => {
     if(document.body.scrollTop || document.documentElement.scrollTop > 50){

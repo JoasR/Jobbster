@@ -72,25 +72,10 @@ header #navbar .logo:hover {
     transform: scale(1.2);
 }
 
-header nav #menuBtn{
-    color: var(--theme-color);
-    position: absolute;
-    top: 0;
-    right: 0;
-    line-height: 70px;
-    cursor: pointer;
-    margin-right: 30px;
-    font-size: 24px;
-}
-
 header nav ul a{
     color: white;
     font-size: 17px;
     transition: all 0.5s;
-}
-
-header nav ul a:hover{
-    color: var(--theme-color);
 }
 
 header .login-btn{
@@ -101,19 +86,34 @@ header .login-btn{
     padding: 7px 25px;
     color: #232b2b;
     font-family: var(--font-ubuntu);
-    border-radius: 2px;
+    border-radius: 5px;
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.6);
+}
+
+header nav ul a:hover{
+    color: var(--theme-color);
 }
 
 header .login-btn:hover,
 .login-btn:focus {
 	color: var(--theme-color);
     background-color: #333;
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.6);
 } 
 
 header .header-btn:focus {
     color: var(--theme-color);
     background-color: #333;
 }
+
+/* header .login-btn {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}  
+
+header .login-btn:hover, .login-btn:focus {
+    animation: pulse 1s;
+    box-shadow: 0 0 0 1em transparent;
+} */
 
 header nav ul{
     width: 0%;
@@ -173,11 +173,11 @@ header .container a {
     padding: 8px 36px;
     -webkit-transition: all 0.5s;
 	transition: all 0.5s;
-    border-radius: 2px;
+    border-radius: 5px;
 }
 
 header .header-btn {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.6);
 }  
 
 header .header-btn:hover, .header-btn:focus {
@@ -195,6 +195,82 @@ header .header-btn:nth-of-type(2){
 
 .container .header-btn{
     font-size: 19px;
+}
+
+/* Hamburger Menu */
+
+header nav #menuBtn{
+    color: var(--theme-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 70px;
+    cursor: pointer;
+    margin-right: 30px;
+    font-size: 24px;
+    margin-top: 22px;
+}
+
+.visuallyHidden {
+    position: absolute; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height: 1px; width: 1px; 
+    margin: -1px; padding: 0; border: 0; 
+}
+
+.hamburger {
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.hamburger .bar {
+    padding: 0;
+    width: 30px;
+    height: 4px;
+    background-color: var(--theme-color);
+    display: block;
+    border-radius: 4px;
+    transition: all 0.4s ease-in-out;
+    position: absolute; 
+}
+
+.bar1 {
+    top: 0;
+}
+
+.bar2,
+.bar3 {
+    top: 13.5px;
+}
+
+.bar3 {
+    right: 0;
+}
+
+.bar4 {
+    bottom: 0;
+}
+
+.checkbox2:checked + label > .hamburger2 > .bar1{
+    transform: translateX(40px);
+    background-color: transparent;
+}
+
+.checkbox2:checked + label > .hamburger2 > .bar2{
+    transform: rotate(45deg);
+}
+
+.checkbox2:checked + label > .hamburger2 > .bar3{
+    transform: rotate(-45deg);
+}
+
+.checkbox2:checked + label > .hamburger2 > .bar4{
+    transform: translateX(-40px);
+    background-color: transparent;
 }
 
 /* About styling */
@@ -271,11 +347,11 @@ main{
 }
 
 main .about #get-google{
-    width: 225px;
+    width: 175px;
 }
 
 main .about #get-apple{
-    width: 255px;
+    width: 175px;
 }
 
 main .about .get-app{
@@ -290,9 +366,10 @@ main .about .get-app:hover{
 
 main .about .qrcode{
     margin-top: 0px;
-    width: 210px;
+    width: 150px;
     height: auto;   
 }
+
 
 /* services styling */
 
@@ -363,13 +440,14 @@ main .about .qrcode{
 }
 
 .works ul li{
+    margin-top: 50px;
     display: inline-block;
     padding: 0 10px;
 }
 
 .works ul a{
-    font-size: 11px;
-    color: #232b2b;
+    font-size: 14px;
+    color: #828282;
     font-weight: 600;
 }
 
@@ -388,6 +466,128 @@ main .about .qrcode{
     margin: 20px;
     border-radius: 10px;
 }
+
+/* Cards Styling */
+
+.cardcontainer {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1500px;
+    margin: 15px auto;
+}
+
+.cardcontainer .card{
+    position: relative;
+    min-width: 400px;
+    height: 440px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin: 30px;
+    transition: 0.5s;
+}
+
+.cardcontainer .card .cardbox {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: #232b2b;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.cardcontainer .card .cardbox:hover{
+    transform: translateY(-15px);
+}
+
+.cardcontainer .card .cardbox:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.cardcontainer .card .cardbox .cardcontent{
+    padding: 20px;
+    text-align: center;
+}
+
+.cardcontainer .card .cardbox .cardcontent h3 {
+    font-size: 1.8rem;
+    color: var(--theme-color);
+    z-index: 1;
+    transition: 0.5s;
+    margin-bottom: 15px;
+} 
+
+.cardcontainer .card .cardbox .cardcontent p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.cardcontainer .card .cardbox .cardcontent a {
+    position: absolute;
+    display: inline-block;
+    padding: 8px 20px;
+    background: var(--theme-color);
+    border-radius: 5px;
+    text-decoration: none;
+    color: #232b2b;
+    margin-top: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+    bottom: 30px;
+    margin-left: 35px;
+}
+
+.cardcontainer .card .cardbox .cardcontent a:hover {
+    animation: pulse 1s;
+    box-shadow: 0 0 0 1em transparent;
+}
+
+/* End Cards Styling  */
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 var(--theme-color); }
+}
+
+.works .alljobbs-btn {
+    font-size: 19px;
+    background-color: var(--theme-color);
+    -webkit-transition: all 0.5s;
+	transition: all 0.5s;
+    padding: 7px 25px;
+    color: #232b2b;
+    font-family: var(--font-ubuntu);
+    border-radius: 5px;
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.6);
+}
+
+.works .alljobbs-btn:hover, .alljobbs-btn:focus {
+    animation: pulse 1s;
+    box-shadow: 0 0 0 1em transparent;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 var(--theme-color); }
+}
+
+
 
 /* contact form styling */
 
@@ -470,14 +670,17 @@ footer p{
 
 /* ****** For Tablets and Ipad screen ******* */
 
-/* Header Styling */
 
-header .header-btn:nth-of-type(2){
-    margin-left: 15px;
-}
 
 @media(min-width: 767px) {
-    /* about styling */
+
+/* Header Styling */
+
+    header .header-btn:nth-of-type(2){
+        margin-left: 15px;
+    }
+ 
+/* about styling */
     .about .col{
         width: 350px;
         height: 350px;
@@ -499,6 +702,30 @@ header .header-btn:nth-of-type(2){
 
     .about .col p #downloadForFree{
         font-size: 16px;
+    }
+
+    main .about #get-google{
+        width: 225px;
+    }
+    
+    main .about #get-apple{
+        width: 255px;
+    }
+    
+    main .about .get-app{
+        margin-top: 10px;
+        height: auto;
+        transition: all .5s ease-in-out;
+    }
+    
+    main .about .get-app:hover{
+        transform: scale(1.1);
+    }
+    
+    main .about .qrcode{
+        margin-top: 0px;
+        width: 210px;
+        height: auto;   
     }
 
     /* services styling */
@@ -534,13 +761,13 @@ header .header-btn:nth-of-type(2){
     }
     
     .works h3{
-        font-size: 15px;
+        font-size: 18px;
         width: 70%;
-        margin: 20px auto;
+        margin: 30px auto 45px;
     }
     
     .works ul a{
-        font-size: 14px;
+        font-size: 16px;
     }
     
     .works .images{
@@ -568,7 +795,7 @@ header .header-btn:nth-of-type(2){
 
 /* ****** For Tablets portrait mode and desktops screen ******* */
 
-@media (min-width: 1024px){
+@media (min-width: 1300px){
     /* header styling */
     header nav ul{
         position: absolute;
@@ -755,7 +982,7 @@ header .header-btn:nth-of-type(2){
     }
 
     .works ul a{
-        font-size: 14px;
+        font-size: 16px;
         color: #828282;
     }
   
