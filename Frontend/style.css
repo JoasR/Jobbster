@@ -31,6 +31,7 @@ body{
 /* ****** For Mobile and Smartphone screen ******* */
 
 /* Header styling */
+
 header{
     width: 100%;
     height: 100vh;
@@ -286,6 +287,11 @@ main{
     margin: 40px 0;
 }
 
+.about h1{
+    font-size: 25px;
+    padding: 10px 0;
+}
+
 .about .col{
     width: 250px;
     height: 250px;
@@ -401,6 +407,7 @@ main .about .qrcode{
 
 .services .col:hover {
     transform: scale(1.1);
+    cursor: default;
 }
 
 .services .col i {
@@ -418,6 +425,10 @@ main .about .qrcode{
     font-size: 10px;
     width: 97%;
     text-align: center;
+}
+
+.services .arrow-icon {
+    display: none;
 }
 
 /* latest works styling */
@@ -522,7 +533,7 @@ main .about .qrcode{
 .cardcontainer .card .cardbox .cardcontent{
     padding: 20px;
     text-align: center;
-    max-height: 27ch;
+    max-height: 26ch;
     overflow: hidden;
 }
 
@@ -667,8 +678,8 @@ footer{
 }
 
 footer p{
-    font-size: 15px;
-    padding-top: 20px;
+    font-size: 12px;
+    padding: 20px 10px;
 }
 
 
@@ -761,6 +772,10 @@ footer p{
         font-size: 12px;
     }
 
+    .services .arrow-icon{
+        display: none;
+    }
+
     /* latest works styling */
 
     .works h1{
@@ -801,6 +816,12 @@ footer p{
     
     .contact button{
        width: 70%;
+    }
+
+    /* Footer Styling */
+
+    footer p{
+        font-size: 15px;
     }
 }
 
@@ -966,21 +987,32 @@ footer p{
      /* services styling */
 
      .services {
-        margin: 100px 0;
+        width: 80%;
+        margin: 10px auto 10px;
      }
 
      .services h1{
-        font-size: 27px;
+        font-size: 30px;
      }
 
      .services h2{
-        font-size: 12px;
-        width: 50%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 18px;
+        width: 65%;
         font-weight: 300;
      }
 
+     .services .col h3{
+        font-size: 22px;
+     }
+
+     .services .col h4{
+        font-size: 16px;
+     }
+
      .services .col {
-        width: 350px;
+        width: 450px;
         height: 230px;
         margin: 30px 20px;
         display: inline-block;
@@ -992,12 +1024,31 @@ footer p{
         transform: scale(1.1);
     }
 
+    .services .arrow-icon{
+        color: var(--theme-color);
+        font-size: 40px;
+        position: absolute;
+        margin-top: 150px;
+        margin-left: -25px;
+        display: inline-block;
+    }
+
     /* latest work styling */
+
+    .works{
+        width: 82%;
+    }
 
     .works h1{
         font-size: 30px;
     }
     
+    .works h3{
+        font-size: 18px;
+        font-weight: 400;
+        width: 65%;
+    }
+
     .works ul li{
         display: inline-block;
     }
