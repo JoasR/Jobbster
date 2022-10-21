@@ -837,7 +837,7 @@ footer p{
 
 /* ****** For Tablets portrait mode and desktops screen ******* */
 
-@media (min-width: 1450px){
+@media (min-width: 1374px){
     /* header styling */
 
     header{
@@ -855,7 +855,7 @@ footer p{
         display: flex;
         height: auto;
         background-color: transparent;
-        margin-left: 250px;
+        margin-left: 200px;
         top: 0;
     }
 
@@ -972,7 +972,7 @@ footer p{
         margin-left: auto;
         margin-right: 150px;
         position: relative;
-        left: -250px;
+        left: -200px;
     }
 
     /* about styling */
