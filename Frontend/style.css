@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
 /* Fonts */
 @font-face {
     font-family: Poppins;
@@ -11,8 +14,8 @@
 
 /* variables */
 :root{
-    --font-ubuntu: Ubuntu;
     --font-poppins: Poppins;
+    --font-ubuntu: Ubuntu;
     --theme-color: #F5CA7B;
 }
 
@@ -277,7 +280,8 @@ header nav #menuBtn{
 /* About styling */
 
 main{
-    font-family: var(--font-poppins);
+    /* font-family: var(--font-poppins); */
+    font-family: 'Poppins', sans-serif;
 }
 
 .about{
@@ -434,18 +438,18 @@ main .about .qrcode{
 /* latest works styling */
 
 .works{
-    width: 100%;
+    width: 90%;
     height: auto;
     margin: 40px auto;
     text-align: center;
 }
 
 .works h1{
-    font-size: 23px;
+    font-size: 25px;
 }
 
 .works h3{
-    font-size: 16px;
+    font-size: 13px;
     width: 90%;
     margin: 30px auto;
 }
@@ -765,11 +769,12 @@ footer p{
     }
     
     .services .col h3{
-        font-size: 17px;
+        font-size: 22px;
     }
     
     .services .col h4{
-        font-size: 12px;
+        font-size: 16px;
+        font-weight: 400;
     }
 
     .services .arrow-icon{
@@ -827,7 +832,7 @@ footer p{
 
 /* ****** For Tablets portrait mode and desktops screen ******* */
 
-@media (min-width: 1300px){
+@media (min-width: 1450px){
     /* header styling */
 
     header{
@@ -1000,7 +1005,7 @@ footer p{
         margin-bottom: 20px;
         font-size: 18px;
         width: 65%;
-        font-weight: 300;
+        font-weight: 500;
      }
 
      .services .col h3{
@@ -1009,6 +1014,7 @@ footer p{
 
      .services .col h4{
         font-size: 16px;
+        font-weight: 600;
      }
 
      .services .col {
@@ -1054,7 +1060,7 @@ footer p{
     }
 
     .works ul a{
-        font-size: 16px;
+        font-size: 17px;
         color: #828282;
     }
   
@@ -1087,11 +1093,15 @@ footer p{
 }
 
 .cardcontainer .card .cardbox .cardcontent h3 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
 } 
 
 .cardcontainer .card .cardbox .cardcontent p {
     font-size: 1rem;
+}
+
+.cardcontainer .card .cardbox .cardcontent a{
+    margin-left: 40px;
 }
 
 /* End Cards Styling  */

@@ -26,9 +26,9 @@ menuBtn.addEventListener("click", () => {
 window.addEventListener("resize", openCloseHamburger);
 
 function openCloseHamburger(){
-    if(document.documentElement.clientWidth > 1299){
+    if(document.documentElement.clientWidth > 1449){
         menu.style.width = "100%";
-    } else if (document.documentElement.clientWidth < 1300 && menuHidden){
+    } else if (document.documentElement.clientWidth < 1450 && menuHidden){
         menu.style.width = "0%";
     } else {
         menu.style.width = "100%";
